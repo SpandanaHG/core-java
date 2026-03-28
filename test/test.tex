@@ -1,0 +1,131 @@
+1.Ans: Java is an object oriented programming language . The java is known as the platform independent because , when the java program is compiled the class creates a bytecode or .class , this bytecode is run by the JVM (Java Virtual Machine) on any other system which having the JVM . So , the java programming language is known as the platform independent.
+
+2.Ans: Architecture of the JDK :
+	JDK consists of two parts , 1.Tools : here the javac is present (javac is used to compile the code )
+				    2.JRE : here all the inbuilt libraries , execution of the program all are present in the jre  
+
+3.Ans: JVM stands for the Java Virtual Machine . It is a storage space which is built to execute the program . 	In java , the JVM is used to execute the bytecode or .class .
+
+4.Ans: Write Once Run Anywhere : Java programming language is having the property called "Write Once Run Anywhere" . This means when the java program is written and compiled once , it creates the .class , this  .class can execute or run in the same system or any systems where the JVM is present .
+
+5.Ans: bytecode in Java :  In java , when we write the program , first we create a class . When we compile this program , it creates .class , this .class is called as the bytecode . This bytecode is generated so that the JVM can understand the program which we are written. Because of this bytecode , the java is known as the platform independent. 
+
+6.Ans: DataTypes in java : DataType is used for the declaration of the Variables . The Data type is used to specify what type of the values can be store in the variable and how much the memory is allocated to that variable . When the declaration of the variable is done by giving the specific data type , only that type of values can be store in that variable , if we try to store the different type of values then it throws an error. 
+	There are two types of Data Type : 1. Primitive Data type and 2.Non Primitive Data Type 
+	1. Primitive Data Type : These are the keywords . There are total 8 primitive data type . They are,
+		byte
+		short
+		int
+		long
+		float
+		double
+		boolean  
+		char
+	Example: int number; 
+  		 byte age;
+		 long phoneNumber;
+	2. Non Primitive Data type : All the class name is a Data type  , those are the non primitive datatype . The non primitive data type are the user defined data type .
+	Example: String name;
+		 Map map;
+		 Cup cup;
+
+7.Ans: Default values :  The values which is assigned by the jvm to the variables if the values are not assigned by the users is called as the default values . Or if the developer is declaring and initializing the variables , but the developer dosen't want to store the values , he can assign the default values 
+Program to print all the default values of all datatype (using the instances) 
+class PersonDetails{
+	byte age;
+	short values;
+	int id;
+	long mobileNumber;
+	float marks;
+	double totalMarks;
+	boolean isStudent;
+	char grade;
+	String name;
+	public 	PersonDetails()
+	{
+		System.out.println("Creating the constructor with no-args");
+	}
+}
+
+class PersonDetailsRunner{
+	public static void main(String[] values)
+	{
+		PersonDetails details = new PersonDetails();
+		System.out.println("Default value of age: "+details.age+"Default value of values : "+details.values+"Default values of id is : "+details.id+"default values of mobileNumber : "+details.mobileNumber+"Marks :"+details.marks+"totalMarks : "+details.totalMarks+"isStudent : "+details.isStudent+"grade : "+details.grade+" name :"+details.name);
+	}
+}
+
+Example :
+class PersonDetails{
+	public static void main(String[] values){
+	byte age = 0;
+	short values = 0;
+	int id = 0;
+	long mobileNumber ; 0L;
+	float marks = 0.0f;
+	double totalMarks = 0.0;
+	boolean isStudent = false;
+	char grade = '';
+	String name = null
+	System.out.println("Default values are "+age);
+	System.out.println("Default values are "+values);
+	System.out.println("Default values are "+id);
+	System.out.println("Default values are "+mobileNumber);
+	System.out.println("Default values are "+marks);
+	System.out.println("Default values are "+totalMarks);
+	System.out.println("Default values are "+isStudent);
+	System.out.println("Default values are "+grade);
+	System.out.println("Default values are "+name);
+	}
+	
+8.Ans: Variables in Java : Variables are the containers to stores the values .
+In variables there are 4 types : Static , non static (instance) , local , parameters
+The static variables that are declaried inside the class with the static keyword 
+The local variables are the variables which are declaried inside mathods or block 
+Example of static variables are 
+class Map{
+	static String place;
+	static double coordibnates;
+}
+Example of local variable
+class Cup{
+	public static void main(String[] values)
+	{
+		double size;
+		String color;
+	}
+}
+
+9.Ans : Static method are the method which executes the block of code . Static method can be called from the class name followed by the . operator and then the method name and then parameters (if any).
+Syntax of calling static method is :
+						className.methodName(arguments);
+						
+10.Ans :Program
+class Sales{
+	public static void main(String[] values)
+	{
+		double day1 = 4080.0;
+		double day2 = 3211.0;
+		double day3 = 6500.0;
+		double day4 = 3544.0;
+		double day5 = 2450.0;
+		double day6 = 5570.0;
+		double day7 = 9500.0;
+		double[] days = {day1 , day2 , day3 , day4 , day5 , day6 , day7};
+		double week = day1+day2+day3+day4+day5+day6+day7;
+		System.out.println("Total sales of the week is : "+week);
+	
+		for (int start = 0 ; start<days.length;start++){
+			for(int value = 1 ; value<days.length;value++){
+				if(days[start]<days[value])
+				{
+					System.out.println("Highest sales is : "+days[value]);
+				}
+			}
+			
+		}
+	}
+}
+
+ 
+ 
